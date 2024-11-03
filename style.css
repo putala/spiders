@@ -1,46 +1,62 @@
 
+
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 header {
+    width: calc(100% - 200px);
     background-color: #333;
     color: #fff;
-    padding: 10px;
     text-align: center;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+nav ul li {
+    display: inline-block;
+    width: 200px;
+    position: relative;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-header nav ul li ul {
+nav ul ul {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #444;
     padding: 10px;
-    border-radius: 5px;
 }
 
-header nav ul li:hover ul {
+ol li {
+    font-weight: bold;
+}
+
+nav ul li:hover ul {
     display: block;
 }
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
 .left-ad, .right-ad {
-    width: 15%;
-    background-color: #eee;
-    padding: 20px;
+    width: 160px;
+    height: 100%;
+    background-color: #00b6f5;
     text-align: center;
     position: fixed;
-    top: 100px;
+    top: 0; /* Dla .left-ad powinno być ustawione na 0, dla .right-ad musisz ustawić odpowiednią wartość (np. top: 0; right: 0;) */
+    /* Zmiana dla .right-ad */
+    /* Jeśli to jest dla prawej reklamy */
+    /* right: 0; */
+    display: flex;            /* Umożliwia użycie Flexbox */
+    flex-direction: column;   /* Ustawienie w pionie */
+    justify-content: flex-end;/* Wyrównanie do dołu */
 }
 
 .left-ad {
@@ -52,23 +68,43 @@ header nav ul li:hover ul {
 }
 
 main {
-    margin: 0 20%;
+    margin: 0 160px;
     padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: lightgray;
 }
 
 footer {
-    background-color: #333;
+    width: calc(100% - 320px);
+    background-color: #444;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
+.definition-header {
+    background-color: darkgreen;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    overflow: hidden;
+    margin: 0;
+}
 
+.definition {
+    background-color: lightgreen;
+    padding: 10px;
+    overflow: hidden;
+    margin: 0;
+}
 
-
-
+.article-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: block;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 
