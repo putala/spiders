@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    width: 100%;
+    width: calc(100% - 200px);
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -31,6 +31,10 @@ nav ul ul {
     padding: 10px;
 }
 
+ol li {
+    font-weight: bold;
+}
+
 nav ul li:hover ul {
     display: block;
 }
@@ -41,13 +45,12 @@ nav ul li a {
 }
 
 .left-ad, .right-ad {
-    width: 20%;
-    height: 80%;
-    background-color: green;
+    width: 200px;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
     /* padding: 10px; */
     text-align: center;
-    position: fixed;
-    /* top: 100px; */
+    position: fixed
 }
 
 .left-ad {
@@ -58,20 +61,33 @@ nav ul li a {
     right: 0;
 }
 
-
 main {
-    margin: 0 20%;
+    margin: 0 200px;
     padding: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: red;
+    background-color: lightgray;
 }
 
-
 footer {
-    width: 100%;
-    background-color: blue;
+    width: calc(100% - 400px);
+    background-color: #444;
     color: #fff;
     text-align: center;
 }
 
+.definition-header {
+    background-color: darkgreen;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    overflow: hidden;
+    margin: 0;
+}
+
+.definition {
+    background-color: lightgreen;
+    padding: 10px;
+    overflow: hidden;
+    margin: 0;
+}
